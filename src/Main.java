@@ -8,7 +8,7 @@ public class Main {
         while(id.length() < 9){
             id = "0" + id;
         }
-        System.out.println(id);
+        System.out.println("The id you entered is " + id);
         if(id.length()!= 9){
             return false;
         }
