@@ -5,6 +5,10 @@ public class Main {
     public static boolean IdChecker(String id) {
         boolean flag = false;
         int sum =0;
+        while(id.length() < 9){
+            id = "0" + id;
+        }
+        System.out.println(id);
         if(id.length()!= 9){
             return false;
         }
