@@ -8,11 +8,9 @@ public class wordle {
         String[] words = {"apple", "table", "house", "river", "grass", "chair", "plane", "cloud", "light", "stone"};
         Random rnd = new Random();
         int num = rnd.nextInt(0, 9);
-        System.out.println("the secret word is " + words[num]);
         return words[num];
     }
 
-    //^ works
     public static String CheckLength(String word) {
         Scanner sc = new Scanner(System.in);
         while (true) {
@@ -25,15 +23,6 @@ public class wordle {
         }
         return word;
     }
-//^ works
-
-
-// i have two funcs
-    // one gets me a secret words
-    // the second one cheks if the words i choose is 5 letters
-    // a func that gets two words and checks which letters are corresponding
-
-    // i need to write a func that checks if the word that i chose matches the secret word
     public static String [] CheckWord(String word, String secretWord) {
         String [] answer = {"_","_","_","_","_"};
         for (int i = 0; i < secretWord.length(); i++) {
@@ -46,9 +35,6 @@ public class wordle {
         }
         return answer;
     }
-
-
-    // in the main ill write the 6 tries thingie (just use a for loop for 6 times and thats it)
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String secretWord = GetWord();
@@ -56,7 +42,6 @@ public class wordle {
             System.out.println("Enter a word, it should be 5 letters long");
             String word = CheckLength(sc.nextLine());
             String [] finalAnswer = CheckWord(word,secretWord);
-//            System.out.println("final answer is "+ finalAnswer);
             if (Arrays.equals(finalAnswer,new String[] {"G", "G", "G", "G", "G"})){
                 System.out.println("You won");
                 return;
